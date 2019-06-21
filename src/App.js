@@ -59,11 +59,15 @@ class App extends React.Component {
   }
 
   handleAddButtonClick(){
-    let newEventArray = Object.assign([],this.state.eventArray);
-    let newEventStatus = Object.assign([],this.state.eventStatus);
-    newEventArray.push(this.state.enentValue);
-    newEventStatus.push(false);
-    this.setState({eventArray:newEventArray,eventStatus:newEventStatus});
+    if(this.state.enentValue !=""){
+      let newEventArray = Object.assign([],this.state.eventArray);
+      let newEventStatus = Object.assign([],this.state.eventStatus);
+      newEventArray.push(this.state.enentValue);
+      newEventStatus.push(false);
+      this.setState({eventArray:newEventArray,eventStatus:newEventStatus});
+    } else {
+      alert("Please input the event !!")
+    }
   }
 
   handleFinishButtonClick(index){

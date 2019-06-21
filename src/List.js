@@ -18,6 +18,9 @@ const Title = styled.p`
     font-weight:bold;
     font-size:32px;
     color: deeppink;
+    :hover {
+        cursor: default;
+    }  
 `
 
 const Content = styled.p`
@@ -25,7 +28,9 @@ const Content = styled.p`
     font-weight:bold;
     color:black;
     font-family:"微軟正黑體";
-    
+    :hover {
+        cursor: default;
+    }   
 `
 const ButtonBlock = styled.div`
     display:flex;
@@ -38,7 +43,10 @@ const Button = styled.input`
     top:100px;
     border-radius:5px;
     text-align:center;
-    visibility:${props=>props.status?"hidden":"visible"}
+    visibility:${props=>props.status?"hidden":"visible"};
+    :hover {
+        cursor: pointer;
+    }   
 `
  class List extends React.Component{
     render(){
